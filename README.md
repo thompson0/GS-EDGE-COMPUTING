@@ -32,7 +32,7 @@ Detectar o nível da água em um bueiro e alertar com:
 ## Projeto no Wokwi
 
 Acesse o simulador: [https://wokwi.com]([https://wokwi.com](https://wokwi.com/projects/432241203851159553)])
-[Foto do protótipo](https://github.com/user-attachments/assets/7d17bb03-6934-4bf6-8996-030ad9f3194c)
+[](https://github.com/user-attachments/assets/7d17bb03-6934-4bf6-8996-030ad9f3194c)
 
 
 
