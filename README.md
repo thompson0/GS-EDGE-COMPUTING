@@ -24,10 +24,11 @@ Detectar o nível da água em um bueiro e alertar com:
 
 - **Potenciômetro** simula a altura da água, convertida para uma distância entre **2 e 100 cm** com `map()`.
 - De acordo com a distância, o sistema classifica o nível da água:
-  - **Bom (baixo)**: distância > 80 cm → LED verde aceso.
+  - **Bom (baixo)**: distância < 60 cm → LED verde aceso.
   - **Médio**: entre 60 e 80 cm → LED amarelo aceso.
-  - **Crítico**: ≤ 60 cm → LED vermelho e buzzer ativados.
+  - **Crítico**: ≥ 80 cm → LED vermelho e buzzer ativados.
 - O **LCD** mostra mensagens como “Nível de água bom”, “médio” ou “alto”, com a distância.
+
 
 ## Projeto no Wokwi
 
