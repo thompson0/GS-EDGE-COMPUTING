@@ -1,9 +1,11 @@
 # 🌧️ Sistema de Monitoramento de Bueiros com Arduino
 
-Este projeto simula um sistema de monitoramento de enchentes em bueiros, utilizando sensores e componentes eletrônicos básicos, ideal para testes no simulador [Wokwi](https://wokwi.com/) ou para uso em protótipos reais.
+Este projeto simula um sistema de monitoramento de enchentes em bueiros, utilizando sensores e componentes eletrônicos básicos, ideal para testes no simulador Wokwi.
 
 ## Integrantes
-
+Gabriel Thompson Freitas RM563126\
+João Pedro Sassarão De Carvalho RM562499\
+Juan Pablo Molina Molina RM564445
 
 
 ## Objetivo
