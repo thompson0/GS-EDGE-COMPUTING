@@ -1,21 +1,21 @@
-# 🌧️ Sistema de Monitoramento de Bueiros com Arduino
+# 🌧️ Projeto de Monitoramento de Bueiros com Arduino
 
-Este projeto simula um sistema de monitoramento de enchentes em bueiros, utilizando sensores e componentes eletrônicos básicos, ideal para testes no simulador Wokwi.
+Este projeto utiliza sensores e um display LCD para monitorar o **nível de água em bueiros**, com o objetivo de prevenir enchentes. Um **potenciômetro** simula o nível de chuva, influenciando o tempo de leitura do sistema.
 
 ## Integrantes
-Gabriel Thompson Freitas RM563126\
-João Pedro Sassarão De Carvalho RM562499\
-Juan Pablo Molina Molina RM564445
 
+-Gabriel Thompson Freitas RM563126\
+-João Pedro Sassarão De Carvalho RM562499\
+-Juan Pablo Molina Molina RM564445
 
-## Objetivo
+##  Objetivo
 
-Detectar o nível da água em um bueiro e emitir alertas por meio de:  
-- LEDs de status (verde, amarelo e vermelho)  
-- Buzzer (alarme sonoro)  
-- Display LCD (exibição do nível da água em tempo real)
+Detectar o nível da água em um bueiro e alertar com:
+- LEDs de status (verde, amarelo, vermelho)
+- Buzzer (alarme sonoro)
+- Display LCD (exibição do nível da água)
 
-## Componentes Utilizados
+## ⚙️ Componentes Utilizados
 
 | Componente         | Função                                   |
 |--------------------|-----------------------------------------|
@@ -26,18 +26,23 @@ Detectar o nível da água em um bueiro e emitir alertas por meio de:
 | LCD I2C 16x2       | Exibe mensagens sobre o nível da água   |
 | HC-SR04 (simulado) | Sensor ultrassônico de distância (incluso para futuras melhorias) |
 
-## Funcionamento
 
-- O **potenciômetro** simula o nível de água, convertendo seu valor para uma distância entre **2 e 100 cm** usando `map()`.  
-- Conforme a distância simulada, o sistema define o nível do bueiro:  
-  - **Bom (baixo)**: distância maior que 80 cm — LED verde aceso.  
-  - **Médio**: entre 60 e 80 cm — LED amarelo aceso.  
-  - **Alto (crítico)**: menor ou igual a 60 cm — LED vermelho aceso e buzzer acionado.  
-- O **LCD** mostra mensagens como “Nível de água bom”, “médio” ou “alto”, acompanhadas do valor da distância.
+## 🧠 Lógica de Funcionamento
+
+1. O **potenciômetro** simula a intensidade da chuva:
+   - Baixa chuva → leituras mais espaçadas
+   - Alta chuva → leituras mais frequentes
+
+2. O **sensor ultrassônico** mede a distância da água até a tampa do bueiro:
+   - **Distância ≤ 40 cm** → Nível crítico (LED vermelho + buzzer)
+   - **Distância ≤ 100 cm** → Nível médio (LED amarelo)
+   - **Distância > 100 cm** → Nível seguro (LED verde)
+
+3. As informações são exibidas no **LCD** em tempo real.
 
 ## Projeto no Wokwi
 
-[Acesse o simulador aqui](https://wokwi.com/projects/432241203851159553)
+[-Acesso o simulador](https://wokwi.com/projects/432241203851159553)
+
 
 ![](https://github.com/user-attachments/assets/7d17bb03-6934-4bf6-8996-030ad9f3194c)
-
