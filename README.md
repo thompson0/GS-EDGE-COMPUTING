@@ -20,11 +20,11 @@ Detectar o nível da água em um bueiro e alertar com:
 | Componente         | Função                                   |
 |--------------------|-----------------------------------------|
 | Arduino Uno        | Microcontrolador principal               |
-| Potenciômetro      | Simula o sensor de nível de água         |
+| Potenciômetro      | Simula intesidade da chuva               |
 | LEDs (3 cores)     | Indicação visual dos níveis de alerta    |
 | Buzzer             | Emite alerta sonoro no nível crítico     |
-| LCD I2C 16x2       | Exibe mensagens sobre o nível da água   |
-| HC-SR04 (simulado) | Sensor ultrassônico de distância (incluso para futuras melhorias) |
+| LCD I2C 16x2       | Exibe mensagens sobre o nível da água    |
+| HC-SR04            | Sensor ultrassônico de distância         |
 
 
 ## 🧠 Lógica de Funcionamento
