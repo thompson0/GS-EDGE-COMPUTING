@@ -1,41 +1,38 @@
 # 🌧️ Sistema de Monitoramento de Bueiros com Arduino
 
-Este projeto simula um sistema de monitoramento de enchentes em bueiros, utilizando sensores e componentes eletrônicos comuns, ideal para testes no simulador [Wokwi](https://wokwi.com/) ou para uso em protótipos reais.
+Este projeto simula um sistema de monitoramento de enchentes em bueiros, utilizando sensores e componentes eletrônicos básicos, ideal para testes no simulador [Wokwi](https://wokwi.com/) ou para uso em protótipos reais.
 
-##  Objetivo
+## Integrantes
 
-Detectar o nível da água em um bueiro e alertar com:
-- LEDs de status (verde, amarelo, vermelho)
-- Buzzer (alarme sonoro)
-- Display LCD (exibição do nível da água)
+
+
+## Objetivo
+
+Detectar o nível da água em um bueiro e emitir alertas por meio de:  
+- LEDs de status (verde, amarelo e vermelho)  
+- Buzzer (alarme sonoro)  
+- Display LCD (exibição do nível da água em tempo real)
 
 ## Componentes Utilizados
 
-| Componente         | Função                                  |
-|--------------------|------------------------------------------|
+| Componente         | Função                                   |
+|--------------------|-----------------------------------------|
 | Arduino Uno        | Microcontrolador principal               |
-| Potenciômetro      | Simulação do sensor de nível de água     |
-| LEDs (3 cores)     | Indicação visual de nível (baixo, médio, alto) |
-| Buzzer             | Alarme sonoro em caso crítico            |
-| LCD I2C 16x2       | Exibição em tempo real do nível da água  |
-| HC-SR04 (simulado) | Sensor ultrassônico de distância (não usado no cálculo neste projeto, mas incluído) |
+| Potenciômetro      | Simula o sensor de nível de água         |
+| LEDs (3 cores)     | Indicação visual dos níveis de alerta    |
+| Buzzer             | Emite alerta sonoro no nível crítico     |
+| LCD I2C 16x2       | Exibe mensagens sobre o nível da água   |
+| HC-SR04 (simulado) | Sensor ultrassônico de distância (incluso para futuras melhorias) |
 
 ## Funcionamento
 
-- **Potenciômetro** simula a altura da água, convertida para uma distância entre **2 e 100 cm** com `map()`.
-- De acordo com a distância, o sistema classifica o nível da água:
-  - **Bom (baixo)**: distância < 60 cm → LED verde aceso.
-  - **Médio**: entre 60 e 80 cm → LED amarelo aceso.
-  - **Crítico**: ≥ 80 cm → LED vermelho e buzzer ativados.
-- O **LCD** mostra mensagens como “Nível de água bom”, “médio” ou “alto”, com a distância.
-
+- O **potenciômetro** simula o nível de água, convertendo seu valor para uma distância entre **2 e 100 cm** usando `map()`.  
+- Conforme a distância simulada, o sistema define o nível do bueiro:  
+  - **Bom (baixo)**: distância maior que 80 cm — LED verde aceso.  
+  - **Médio**: entre 60 e 80 cm — LED amarelo aceso.  
+  - **Alto (crítico)**: menor ou igual a 60 cm — LED vermelho aceso e buzzer acionado.  
+- O **LCD** mostra mensagens como “Nível de água bom”, “médio” ou “alto”, acompanhadas do valor da distância.
 
 ## Projeto no Wokwi
 
-[-Acesso o simulador](https://wokwi.com/projects/432241203851159553)
-
-
-![](https://github.com/user-attachments/assets/7d17bb03-6934-4bf6-8996-030ad9f3194c)
-
-
-
+[Acesse o simulador aqui](https://wokwi.com/projects/432241203851159553)
